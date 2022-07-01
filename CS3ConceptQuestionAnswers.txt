@@ -1,0 +1,83 @@
+Answers for Conceptual Questions in Antra SEP C# Assignment 3
+
+1.
+public - the type/member can be accessed by any other code using the current code 
+assembly, meaning a single compilation of one or more .cs files, or another code
+assembly referencing the current assembly
+
+private - the type/member can be accessed only by code in the same class
+
+protected - the type/member can be accessed only by code in the same class or in
+a class that is derived from that class
+
+internal - type/member can be accessed by code in the current assembly, but not
+from other assemblies. Accessing code must be part of the same compilation containing
+the internal type/member
+
+protected internal - type/member can be accessed by any code in the assembly containing
+the declarationn or from a derived class in a different assembly
+
+private protected - type/member can be accessed by derived classes, but only if they
+are declared in the same assembly
+
+2. The static keyword when applied to a type member means the member belongs to the
+type itself instead of any particular instance or object of the type. The const
+keyword means it will be evaluated at compile time rather than during the course
+of a program's exeuction and the member will never change. The readonly keyword
+means the member will only be assigned as part of its declaration or inside of a
+constructor in the same class. Within the declaration and constructor, reassignment
+can happen multiple times.
+
+3. A constructor initializes an instance or object of a particular class. Default
+constructors will intialize a class based on default values or more sepcific
+constructors taking in arguments can be used to initialize members of the class to
+particular values or references.
+
+4. The partial keyword splits the definition of a class, struct, interface, or
+member across multiple source files. This is useful for when multiple developers
+are working on a class at the same time or when source code is automatically
+generated. Ccode can be added to the class without having to re-write the source
+file.
+
+5. A tuple is a generic class data structure that contains a sequence of elements
+that may be of different types.
+
+6. The record keyword is a reference type that can be used in lieu of classes or
+structs. The record stores of a collection of data which then allows for value-based
+equality, meaning two records are equal if they contain identical type definitions
+as well identical values.
+
+7. Overloading a method means writing multiple definitions of a method within a 
+class. The definition used during execution will depend on the parameters used
+to invoke the method. Overriding a method is used when deriving classes from an
+abstract class. The abstract class will provide an abstract definition of the
+method. The derived class will then override the abstract definition with a new
+definition specific to that class.
+
+8. A field is a member defined directly in a class, usualy private. Properties are
+members that provide means for reading and writing these private fields.
+
+9. You can make a method parameter optional by using a default value in the function
+definition. When the method is called and the optional parameter is ommitted, the
+method will use whatever default value is specified.
+
+10. An interface is a contract. Any class or struct that implements the interface
+must contain an implementation of all members defined in the interface. Abstract
+classes are similar, but interfaces cannot contain fields/properties and methods
+the way an abstract class can. Furthermore, a derived class must implement exactly
+1 abstract class as it's "parent" but a class can implement multiple interfaces.
+
+11. By default, members of an interface are abstract and public.
+
+12. true
+13. true
+14. false
+15. false
+16. true
+17. true
+18. true
+19. false
+20. false
+21. true
+22. false
+22. true
